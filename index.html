@@ -3,28 +3,13 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <!-- displays site properly based on user's device -->
-
     <link
       rel="icon"
       type="image/png"
       sizes="32x32"
       href="./images/favicon-32x32.png"
     />
-
     <title>Frontend Mentor | Tip calculator app</title>
-
-    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-    <style>
-      .attribution {
-        font-size: 11px;
-        text-align: center;
-      }
-      .attribution a {
-        color: hsl(228, 45%, 44%);
-      }
-    </style>
-
     <link
       href="https://fonts.googleapis.com/css2?family=Space+Mono&display=swap"
       rel="stylesheet"
@@ -32,14 +17,46 @@
     <link rel="stylesheet" href="main.css" />
   </head>
   <body>
-    Bill Select Tip % 5% 10% 15% 25% 50% Custom Number of People Tip Amount /
-    person Total / person Reset
-
+    <div class="container">
+      <div class="left">
+        <div class="bill">
+          Bill <br />
+          <input
+            type="text"
+            class="bill-input"
+            name="bill"
+            value="0"
+            placeholder="0"
+          />
+        </div>
+        <div class="select-tip">
+          Select Tip %<br />
+          5% 10% 15% 25% 50% Custom
+        </div>
+        <div class="no-of-people">
+          Number of People<br />
+          <input type="number" id="count" name="count" />
+        </div>
+      </div>
+      <div class="right">
+        <div class="row">
+          <div class="amount">Tip Amount <br />/ person</div>
+          <h1>$60.25</h1>
+        </div>
+        <div class="row">
+          <div class="total">Total <br />/ person</div>
+          <h1>$60.25</h1>
+        </div>
+        <button>Reset</button>
+      </div>
+    </div>
+  </body>
+  <footer class="footer">
     <div class="attribution">
       Challenge by
       <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
         >Frontend Mentor</a
-      >. Coded by <a href="#">Your Name Here</a>.
+      >. Coded by <a href="#">weinee</a>.
     </div>
-  </body>
+  </footer>
 </html>
