@@ -2,7 +2,7 @@
   --strong-cyan: hsl(172, 67%, 45%);
   --dark-cyan: hsl(183, 100%, 15%);
   --dark-grayish-cyan: hsl(186, 14%, 43%);
-  --dark-grayish-cyan: hsl(184, 14%, 56%);
+  --semi-dark-grayish-cyan: hsl(184, 14%, 56%);
   --medium-grayish-cyan: hsl(185, 41%, 84%);
   --light-grayish-cyan: hsl(189, 41%, 97%);
   --white: hsl(0, 0%, 100%);
@@ -33,18 +33,51 @@ body {
   display: flex;
   margin-top: auto;
   margin-bottom: auto;
-  width: 60%;
+  width: 55%;
   background-color: var(--white);
   border-radius: 16px;
   padding: 30px;
 }
 
 .container #left {
-  flex: 1.5;
+  flex: 1;
+  margin-right: 50px;
+  margin-left: 20px;
+  padding: 8px;
+}
+
+.container #left .bill,
+.select-tip,
+.no-of-people {
+  color: var(--dark-cyan);
+  font-weight: 700;
 }
 
 .container #left .bill .bill-input {
   text-align: right;
+}
+
+.tip-amount-container {
+  display: flex;
+  flex: 1;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.tip-amount-container .tip-amount {
+  flex: 1;
+  color: var(--light-grayish-cyan);
+  background-color: var(--dark-cyan);
+  text-align: center;
+  font-size: 30px;
+  border-radius: 5px;
+  margin: 8px 16px 8px 0px;
+  padding: 4px;
+}
+
+.custom {
+  color: var(--dark-grayish-cyan) !important;
+  background-color: var(--light-grayish-cyan) !important;
 }
 
 .container #right {
@@ -78,7 +111,7 @@ body {
 }
 
 .container #right .row span {
-  color: var(--dark-grayish-cyan);
+  color: var(--semi-dark-grayish-cyan);
   font-size: 14px;
 }
 
