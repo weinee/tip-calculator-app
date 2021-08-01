@@ -16,14 +16,25 @@
     />
     <link rel="stylesheet" href="main.css" />
   </head>
+  <script>
+    function handleReset() {
+      alert("I am an alert box!");
+    }
+
+    function calculateTip() {
+      let bill = document.getElementById("bill-input").value;
+      let count = document.getElementById("count").value;
+      alert("bill: " + bill + " count: " + count);
+    }
+  </script>
   <body>
     <div class="container">
       <div id="left">
         <div class="bill">
           Bill <br />
           <input
-            type="text"
-            class="bill-input"
+            type="number"
+            id="bill-input"
             name="bill"
             value="0"
             placeholder="0"
@@ -44,7 +55,13 @@
         </div>
         <div class="no-of-people">
           Number of People<br />
-          <input type="number" id="count" name="count" />
+          <input
+            type="number"
+            id="count"
+            name="count"
+            placeholder="1"
+            value="1"
+          />
         </div>
       </div>
       <div id="right">
@@ -56,7 +73,7 @@
           <div class="total">Total <br /><span>/ person</span></div>
           <h1>$32.79</h1>
         </div>
-        <button>RESET</button>
+        <input type="button" onclick="handleReset()" value="RESET" />
       </div>
     </div>
   </body>
