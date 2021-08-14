@@ -29,6 +29,10 @@ body {
   background-color: var(--medium-grayish-cyan);
 }
 
+.logo {
+  margin: auto auto 0 auto;
+}
+
 .container {
   display: flex;
   margin-top: auto;
@@ -37,6 +41,21 @@ body {
   background-color: var(--white);
   border-radius: 16px;
   padding: 30px;
+  flex-wrap: wrap;
+}
+
+.input-container {
+  display: flex;
+  background-color: var(--light-grayish-cyan);
+  border-radius: 5px;
+  padding: 8px;
+  justify-content: space-between;
+  margin: 16px 0;
+  align-items: center;
+}
+
+.input-container img {
+  margin: 0px 8px;
 }
 
 .container #left {
@@ -56,6 +75,17 @@ body {
 .container #left .bill #bill-input,
 .container #left .no-of-people #count {
   text-align: right;
+  background: none;
+  border: none;
+  color: var(--dark-cyan);
+  font-size: 24px;
+  font-weight: 700;
+  font-family: "Space Mono", monospace;
+}
+
+#bill-input:focus,
+#count:focus {
+  outline: none;
 }
 
 .tip-amount-container {
@@ -70,7 +100,7 @@ body {
   color: var(--light-grayish-cyan);
   background-color: var(--dark-cyan);
   text-align: center;
-  font-size: 30px;
+  font-size: 24px;
   border-radius: 5px;
   margin: 8px 16px 8px 0px;
   padding: 4px;
