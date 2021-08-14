@@ -6,6 +6,7 @@
   --medium-grayish-cyan: hsl(185, 41%, 84%);
   --light-grayish-cyan: hsl(189, 41%, 97%);
   --white: hsl(0, 0%, 100%);
+  --orangey: hsl(9, 60%, 68%);
 }
 
 * {
@@ -27,6 +28,7 @@ body {
   font-family: "Space Mono", monospace;
   font-size: 16px;
   background-color: var(--medium-grayish-cyan);
+  cursor: default;
 }
 
 .logo {
@@ -58,11 +60,15 @@ body {
   margin: 0px 8px;
 }
 
+.input-container:focus-within {
+  border: solid var(--strong-cyan);
+}
+
 .container #left {
   flex: 1;
   margin-right: 50px;
   margin-left: 20px;
-  padding: 8px;
+  padding: 16px;
 }
 
 .container #left .bill,
@@ -70,10 +76,13 @@ body {
 .no-of-people {
   color: var(--dark-cyan);
   font-weight: 700;
+  margin-bottom: 36px;
 }
 
 .container #left .bill #bill-input,
 .container #left .no-of-people #count {
+  display: flex;
+  flex: 1;
   text-align: right;
   background: none;
   border: none;
@@ -81,6 +90,7 @@ body {
   font-size: 24px;
   font-weight: 700;
   font-family: "Space Mono", monospace;
+  cursor: pointer;
 }
 
 #bill-input:focus,
@@ -97,6 +107,7 @@ body {
 
 .tip-amount-container .tip-amount {
   flex: 1;
+  border: none;
   color: var(--light-grayish-cyan);
   background-color: var(--dark-cyan);
   text-align: center;
@@ -104,11 +115,25 @@ body {
   border-radius: 5px;
   margin: 8px 16px 8px 0px;
   padding: 4px;
+  cursor: pointer;
+  font-weight: 700;
+  font-family: "Space Mono", monospace;
 }
 
 .custom {
   color: var(--dark-grayish-cyan) !important;
   background-color: var(--light-grayish-cyan) !important;
+  max-width: 30% !important;
+}
+
+[id^="tip"]:focus {
+  background-color: var(--strong-cyan);
+  color: var(--dark-cyan);
+}
+
+#tip-input:focus {
+  outline: none;
+  border: solid var(--strong-cyan) !important;
 }
 
 .container #right {
@@ -129,7 +154,7 @@ body {
   margin: 16px;
 }
 
-.container #right input[type="button"] {
+#reset-button {
   background-color: var(--strong-cyan);
   border: none;
   margin: 148px 16px 24px 16px;
@@ -140,6 +165,11 @@ body {
   font-size: 20px;
   border-radius: 5px;
   cursor: pointer;
+}
+
+#reset-button:disabled {
+  cursor: not-allowed;
+  background-color: var(--dark-grayish-cyan);
 }
 
 .container #right .row span {
